@@ -34,7 +34,7 @@
 
 include spaces.uti
 
-#capital letters
+#capsletter 46
 capsletter 46 #single capital letter
 begcapsword 246 #whole word in caps
 
@@ -63,10 +63,10 @@ punctuation ! 235
 punctuation - 36
 punctuation : 25
 punctuation ; 23
-punctuation … 256-256-256
+punctuation \x2026 256-256-256     # …
 
-punctuation „ 236
-punctuation “ 356
+punctuation \x201E 236             # „
+punctuation \x201C 356             # “
 
 punctuation ( 12356
 punctuation ) 23456
@@ -75,14 +75,13 @@ punctuation ] 6-13456
 punctuation { 6-126
 punctuation } 6-345
 
-sign × 6-3
-sign ÷ 6-23
+sign \x00D7 6-3                    # ×
+sign \x00F7 6-23                   # ÷
 
-sign ™ 456-2345-134
-sign © 456-1-1234
-sign ® 456-1235-15-1245
-sign • 6-12
-
+sign \x2122 456-2345-134           # ™
+sign \x00A9 456-1-1234             # ©
+sign \x00AE 456-1235-15-1245       # ®
+sign \x2022 6-12                   # •
 punctuation / 456-34
 punctuation \\ 456-16
 
@@ -99,15 +98,14 @@ sign & 456-24
 sign * 456-1256
 sign | 456-456
 sign _ 456-36
-sign € 456-15
-sign ° 456-234
+sign \x20AC 456-15                 # €
+sign \x00B0 456-234                # °
 
-punctuation — 6-36
-punctuation – 6-36
+punctuation \x2014 6-36            # —
+punctuation \x2013 6-36            # –
 punctuation ' 3
-punctuation ’ 6-356
-punctuation ‘ 6-236
-
+punctuation \x2019 6-356           # ’
+punctuation \x2018 6-236           # ‘
 punctuation ` 45
 
 # letters (same dot patterns as output)
@@ -210,13 +208,14 @@ base uppercase \x0400 \x0450
 letter \x045D 4-24
 base uppercase \x040D \x045D
 
-#e and i with accent
-sign ѐ 4-15 #cyrillic e-grave → normal e pattern
-sign è 4-15 #latin e-grave → same pattern, fallback
-sign ì 4-24 
+# e and i with accent
+sign \x0450 4-15   # Cyrillic ѐ
+sign \x00E8 4-15   # Latin è
+sign \x00EC 4-24   # Latin ì
 
 # Latin alphabet for output only
 include latinLetterDef6Dots.uti
 
 # Digits to display
 include digits6Dots.uti
+  
