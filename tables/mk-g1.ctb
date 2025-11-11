@@ -17,7 +17,7 @@
 #  Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with liblouis. If not, see <http://www.gnu.org/licenses/>.
+#  along with liblouis. If not, see http://www.gnu.org/licenses/.
 #
 #-index-name: Macedonian
 #-display-name: Macedonian braille
@@ -95,7 +95,7 @@ sign $ 456-145
 sign % 456-1234
 sign ^ 456-13
 sign & 456-24
-sign * 456-1256
+sign \x002a 456-1256
 sign | 456-456
 sign _ 456-36
 sign \x20AC 456-15                 # €
@@ -219,3 +219,4 @@ include latinLetterDef6Dots.uti
 # Digits to display
 include digits6Dots.uti
   
+
