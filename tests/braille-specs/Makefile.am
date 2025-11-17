@@ -149,3 +149,6 @@ EXTRA_DIST =					\
 	zhcn-cbs.yaml				\
 	zhcn-g1.yaml				\
 	zhcn-g2.yaml
+
+clean-local:
+	rm -rf *.log *.trs
