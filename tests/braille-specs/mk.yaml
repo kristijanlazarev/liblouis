@@ -46,6 +46,15 @@ tests:
     - "⠪⠥⠗⠇⠒⠀⠓⠞⠞⠏⠒⠸⠌⠸⠌⠑⠭⠁⠍⠏⠇⠑⠲⠕⠗⠛"
     - xfail: {backward: true}
 
-  # Symbols I explicitly mapped
-  - - "Знаци: @ # $ % & * ( ) [ ] { } / \\\\ | = < > _ - — – : ; ' ’ ‘ , . ? ! °"
-    - "⠨⠵⠝⠁⠉⠊⠒⠀⠸⠍⠀⠸⠼⠀⠸⠙⠀⠸⠏⠀⠸⠊⠀⠸⠳⠀⠷⠀⠾⠀⠠⠯⠀⠠⠽⠀⠠⠣⠀⠠⠜⠀⠸⠌⠀⠸⠡⠀⠸⠸⠀⠠⠶⠀⠠⠪⠀⠠⠕⠀⠸⠤⠀⠤⠀⠠⠤⠀⠠⠤⠀⠒⠀⠆⠀⠄⠀⠠⠴⠀⠠⠦⠀⠂⠀⠲⠀⠢⠀⠖⠀⠸⠎"
+  # Symbols that the table explicitly maps
+  - - "Знаци: @ # $ % & * ( ) [ ] { } / | = < > _ - : ; ' ’ ‘ , . ? ! °"
+    - "⠨⠵⠝⠁⠉⠊⠒⠀⠸⠍⠀⠸⠼⠀⠸⠙⠀⠸⠏⠀⠸⠊⠀⠸⠳⠀⠷⠀⠾⠀⠠⠯⠀⠠⠽⠀⠠⠣⠀⠠⠜⠀⠸⠌⠀⠸⠸⠀⠠⠶⠀⠠⠪⠀⠠⠕⠀⠸⠤⠀⠤⠀⠒⠀⠆⠀⠄⠀⠠⠴⠀⠠⠦⠀⠂⠀⠲⠀⠢⠀⠖⠀⠸⠎"
+  # Both en dash and em dash map to the same braille dots, so
+  # back-translation is obviously going to be difficult
+  - - "— –"
+    - "⠠⠤⠀⠠⠤"
+    - xfail: {backward: true}
+  # we test the '\' symbol separately as there are issues with proper
+  # quoting
+  - - \\
+    - ⠸⠡
